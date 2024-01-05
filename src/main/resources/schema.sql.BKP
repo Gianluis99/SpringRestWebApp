@@ -1,0 +1,35 @@
+
+
+
+CREATE TABLE Ristorante (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    indirizzo VARCHAR(255),
+    stelle INT
+);
+
+CREATE TABLE Cena (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    conto INT,
+    numPersone INT,
+    numPietanze INT,
+    idRistorante INT,
+    FOREIGN KEY (idRistorante) REFERENCES Ristorante(id)
+
+);
+
+
+CREATE TABLE Cliente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    cognome VARCHAR(255)
+);
+
+CREATE TABLE Premio (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nomePremio VARCHAR(255),
+    prezzoPremio INT,
+    cliente_id INT,
+    FOREIGN KEY (cliente_id) REFERENCES cliente(id)
+);
+

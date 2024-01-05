@@ -1,0 +1,23 @@
+-- Inserimento di dati nella tabella Ristorante
+INSERT INTO Ristorante (nome, indirizzo, stelle) VALUES 
+    ('Ristorante Uno', 'Indirizzo Uno', 1),
+    ('Ristorante Due', 'Indirizzo Due', 2),
+    ('Ristorante Tre', 'Indirizzo Tre', 3);
+
+-- Inserimento di dati nella tabella Cliente
+INSERT INTO Cliente (nome, cognome) VALUES 
+    ('Mario', 'Rossi'),
+    ('Luca', 'Verdi'),
+    ('Giulia', 'Bianchi');
+
+-- Inserimento di dati nella tabella Premio
+INSERT INTO Premio (nomePremio, prezzoPremio, cliente_id) VALUES 
+    ('Voucher Cena', 50, 1),
+    ('Buono Sconto', 20, 2),
+    ('Vacanza Gratis', 200, 3);
+
+-- Inserimento di dati nella tabella Cena
+INSERT INTO Cena (conto, numPersone, numPietanze, idRistorante) VALUES 
+    (100, 4, 10, 1),
+    (150, 2, 5, 2),
+    (80, 3, 8, 3);
